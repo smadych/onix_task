@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Cabin-Regular;
+  src: url("fonts/Cabin/Cabin-Regular.ttf");
+}
+@font-face {
+  font-family: Cabin-SemiBold;
+  src: url("fonts/Cabin/Cabin-SemiBold.ttf");
+}
+.main {
+  max-height: 1300px;
+  margin: 50px;
+  background-color: #eeeeee;
+}
+.main header .container {
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.main header .container .block #logo {
+  margin: 0 auto;
+  display: block;
+  width: 50%;
+  min-width: 70px;
+}
+.main header .container nav {
+  text-align: center;
+}
+.main header .container nav ul {
+  display: inline-block;
+}
+.main header .container nav li {
+  list-style: none;
+  float: left;
+  margin-left: 20px;
+}
+.main header .container nav li a {
+  font-family: Cabin-Regular;
+  color: black;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 40px;
+  text-decoration: none;
+}
+.main header .container nav li a:hover {
+  transition: all 0.2s;
+  color: #696969;
+}
+
+article .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 70px 0 70px 0;
+}
+article .container .content {
+  width: 60%;
+  color: #363636;
+  font-family: Cabin-SemiBold;
+}
+article .container .content h6 {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.15px;
+  padding-bottom: 40px;
+}
+article .container .content p {
+  font-size: 22px;
+  line-height: 30px;
+}
+
+section #computer {
+  position: relative;
+  width: 50%;
+  margin: 0 0 0 25%;
+  z-index: 1;
+}
+section #phone {
+  width: 14%;
+  position: absolute;
+  margin: 12% 0 0 17%;
+  z-index: 2;
+}
+section #cup {
+  position: absolute;
+  width: 35%;
+  margin: 23% 0 0 -12%;
+  z-index: 3;
+}
+
+footer {
+  width: 90%;
+  margin: 0 auto 100px;
+}
+footer .container {
+  grid-gap: 30px;
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr;
+}
+footer .container #leftContent {
+  color: #363636;
+  font-family: Cabin-SemiBold;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 50%;
+  float: right;
+  text-align: right;
+}
+footer .container #topText {
+  color: #8e8e8e;
+  font-family: Cabin-Regular;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 20px;
+  padding-bottom: 25px;
+}
+footer .container #bottomText {
+  font-family: Cabin-SemiBold;
+  color: #363636;
+  letter-spacing: 0.15px;
+  font-size: 15px;
+}
+footer .container button {
+  background-color: white;
+  border: 1px solid #cfcfcf;
+  outline: none;
+}
+footer .container button p {
+  font-family: Cabin-SemiBold;
+  padding: 10px 25px;
+  color: #363636;
+}
+footer .container button:hover {
+  transition: all 0.5s;
+  border-color: #F3F3F2;
+  background-color: #F3F3F2;
+}
+
+@media only screen and (max-width: 1024px) {
+  .main header .container {
+    grid-template-columns: 1fr;
+    padding-bottom: 0;
+  }
+  .main header .container .block {
+    margin-bottom: 30px;
+  }
+  .main header .container .block #logo {
+    width: 20%;
+  }
+  .main header .container .block #menuButton {
+    visibility: hidden;
+  }
+  .main header .container nav ul li a {
+    font-size: 13px;
+  }
+
+  footer .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  footer .container #leftContent {
+    font-size: 17px;
+  }
+  footer .container #topText {
+    padding-bottom: 15px;
+  }
+  footer .container #bottomText {
+    font-size: 13px;
+  }
+  footer .container button {
+    float: right;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .main header .container .block #logo {
+    width: 20%;
+  }
+  .main article .container {
+    grid-template-columns: 1fr;
+    margin: 30px 0 70px 0;
+  }
+  .main article .container .content {
+    margin: 0 auto;
+  }
+  .main article .container .content h6 {
+    font-size: 12px;
+  }
+  .main article .container .content p {
+    font-size: 17px;
+  }
+
+  section #phone {
+    margin: 12% 0 0 14%;
+  }
+
+  footer .container #leftContent {
+    font-size: 13px;
+  }
+  footer .container #topText {
+    padding-bottom: 12px;
+    width: 80%;
+  }
+  footer .container #bottomText {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main header .container {
+    padding-bottom: 0;
+  }
+  .main header .container nav ul {
+    display: grid;
+  }
+  .main header .container nav ul li {
+    margin: 0 auto;
+  }
+
+  section #phone {
+    margin: 12% 0 0 10%;
+  }
+
+  footer {
+    width: 70%;
+  }
+  footer .container {
+    grid-template-columns: 1fr;
+  }
+  footer .container #leftContent {
+    float: left;
+    text-align: left;
+  }
+  footer .container #topText {
+    padding-bottom: 12px;
+    width: 80%;
+  }
+  footer .container #bottomText {
+    font-size: 12px;
+  }
+  footer .container button {
+    float: left;
+  }
+}
